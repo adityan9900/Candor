@@ -20,16 +20,64 @@ public class CompanyActivity {
     public static final double dMinus = 0.80;
     public static final double fm = 0.00;
 
+    HashMap<String, Double> hmap = new HashMap<>();
+
     public CompanyActivity () {
-        HashMap<String, Double> hmap = new HashMap<>();
         hmap.put("Cisco Systems", 83.70);
         hmap.put("Ecolab", 81.60);
         hmap.put("Hasbro", 80.00);
     }
 
-    public String getScore() {
+    public String getScore(String x) {
+        if (hmap.containsKey(x)) {
+            return x + "'s score is: " + hmap.get(x);
+        }
+        else {
+            return "That isn't a valid company name";
+        }
+    }
 
+    public String getCompNameNum(double x) {
+        if (hmap.containsValue(x)) {
+            String m = "There's a match: ";
+                for ( String key : hmap.keySet() ) {
+                    if (hmap.get(key) ==  x) {
+                        m += key + "\n";
+                    }
+                }
+            return m;
 
-        return "";
+        }
+        else if (x >100 || x < 0) {
+            return "That's not a valid value";
+        }
+        else if (!hmap.containsValue(x)) {
+            String d = "There's a close match: ";
+            double count = 0.1;
+            boolean status = true;
+            while (status) {
+                for ( String key : hmap.keySet() ) {
+                    if (hmap.get(key) ==  x + count) {
+                        d += key;
+                        status = false;
+                    }
+                }
+                count += 1;
+            }
+            return d;
+        }
+        else {
+            return "Sorry there's an error";
+        }
+    }
+
+    public String getCompNameLetter(String x) {
+        String compare = x.toLowerCase();
+        if (hmap.containsKey(x)) {
+            return x + "'s score is: " + hmap.get(x);
+        }
+        else {
+            return "That isn't a valid letter grade";
+        }
     }
 }
