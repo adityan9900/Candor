@@ -46,7 +46,7 @@
         android:layout_marginTop="16dp"
         android:width="300dp"
         android:ems="10"
-        android:hint="Ex. Google"
+        android:hint="e.g. Google"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
