@@ -4,6 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bootstrap_gray_dark"
     tools:context=".RewardsActivity">
+
+    <ImageButton
+        android:id="@+id/couponImageButton"
+        android:layout_width="0dp"
+        android:layout_height="121dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="160dp"
+        android:contentDescription="Coupon1"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coupon1" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="146dp"
+        android:layout_height="128dp"
+        android:contentDescription="couponImageButton2"
+        app:srcCompat="@drawable/coupon2"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="302dp"
+        tools:scaleType="fitCenter" />
 
 </android.support.constraint.ConstraintLayout>
