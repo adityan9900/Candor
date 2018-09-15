@@ -11,6 +11,9 @@ import com.beardedhen.androidbootstrap.TypefaceProvider;
 public class MainActivity extends AppCompatActivity {
 
     final int COMPANY_SUMMARY_REQUEST_CODE = 1;
+    final int REWARDS_REQUEST_CODE = 2;
+    Button submitCompanyButton;
+    Button rewardsButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -18,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button submitCompanyButton = findViewById(R.id.submitCompanyButton);
+        submitCompanyButton = findViewById(R.id.submitCompanyButton);
+        rewardsButton = findViewById(R.id.rewardsButton);
 
         TypefaceProvider.registerDefaultIconSets();
 
@@ -27,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent myIntent = new Intent(v.getContext(), CompanySummaryActivity.class);
                 startActivityForResult(myIntent, COMPANY_SUMMARY_REQUEST_CODE);
+            }
+        });
+
+        rewardsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(v.getContext(), RewardsActivity.class);
+                startActivityForResult(myIntent, REWARDS_REQUEST_CODE);
             }
         });
     }
