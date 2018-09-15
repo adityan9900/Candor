@@ -22,7 +22,7 @@
         android:layout_height="146dp"
         android:cropToPadding="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/CouponOne"
+        android:src="@drawable/couponOne"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="249dp" />
 
@@ -31,7 +31,7 @@
         android:layout_width="331dp"
         android:layout_height="146dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/CouponTwo"
+        android:src="@drawable/couponTwo"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="400dp" />
 
