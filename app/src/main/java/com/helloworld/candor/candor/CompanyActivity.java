@@ -28,18 +28,56 @@ public class CompanyActivity {
         hmap.put("Hasbro", 80.00);
     }
 
-    public String getScore(String x) {
+    public double getScoreNum(String x) {
         if (hmap.containsKey(x)) {
-            return x + "'s score is: " + hmap.get(x);
+            return hmap.get(x);
         }
-        else {
-            return "That isn't a valid company name";
+        return -1.0;
+    }
+
+    public String getScoreGrade(String x) {
+        if (getScoreNum(x)>60.00) {
+            return "A+";
         }
+        else if (getScoreNum(x)>48.30) {
+            return "A";
+        }
+        else if (getScoreNum(x)>43.20) {
+            return "A";
+        }
+        else if (getScoreNum(x)>38.10) {
+            return "B+";
+        }
+        else if (getScoreNum(x)>31.80) {
+            return "B";
+        }
+        else if (getScoreNum(x)>27.50) {
+            return "B-";
+        }
+        else if (getScoreNum(x)>20.70) {
+            return "C+";
+        }
+        else if (getScoreNum(x)>15.00) {
+            return "C";
+        }
+        else if (getScoreNum(x)>9.80) {
+            return "C-";
+        }
+        else if (getScoreNum(x)>5.60) {
+            return "D+";
+        }
+        else if (getScoreNum(x)>3.90) {
+            return "D";
+        }
+        else if (getScoreNum(x)>0.80) {
+            return "D-";
+        }
+        return "F";
     }
 
     public String getCompNameNum(double x) {
         if (hmap.containsValue(x)) {
-            String m = "There's a match: ";
+            String m = "";
                 for ( String key : hmap.keySet() ) {
                     if (hmap.get(key) ==  x) {
                         m += key + "\n";
@@ -52,7 +90,7 @@ public class CompanyActivity {
             return "That's not a valid value";
         }
         else if (!hmap.containsValue(x)) {
-            String d = "There's a close match: ";
+            String d = "";
             double count = 0.1;
             boolean status = true;
             while (status) {
