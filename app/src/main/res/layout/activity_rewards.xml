@@ -20,9 +20,19 @@
         android:id="@+id/couponOne"
         android:layout_width="331dp"
         android:layout_height="146dp"
+        android:cropToPadding="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/coupon1"
+        android:src="@drawable/CouponOne"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="249dp" />
+
+    <ImageButton
+        android:id="@+id/couponTwo"
+        android:layout_width="331dp"
+        android:layout_height="146dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/CouponTwo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="400dp" />
 
 </android.support.constraint.ConstraintLayout>
