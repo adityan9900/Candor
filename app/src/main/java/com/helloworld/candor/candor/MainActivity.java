@@ -10,13 +10,16 @@ import com.beardedhen.androidbootstrap.TypefaceProvider;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button submitCompanyButton = findViewById(R.id.submitCompanyButton);
     final int COMPANY_SUMMARY_REQUEST_CODE = 1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button submitCompanyButton = findViewById(R.id.submitCompanyButton);
+
         TypefaceProvider.registerDefaultIconSets();
 
         submitCompanyButton.setOnClickListener(new View.OnClickListener() {
