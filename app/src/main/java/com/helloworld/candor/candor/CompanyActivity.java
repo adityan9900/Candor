@@ -48,7 +48,7 @@ public class CompanyActivity {
             return m;
 
         }
-        else if (x >100 || x < 0) {
+        else if (x > 100 || x < 0) {
             return "That's not a valid value";
         }
         else if (!hmap.containsValue(x)) {
@@ -115,5 +115,17 @@ public class CompanyActivity {
         else {
             return "That isn't a valid letter grade";
         }
+    }
+
+    public String getLowest() {
+        return "1. Windstream Holdings\n" +
+                "2. World Fuel Services\n +" +
+                "3. XPO Logistics";
+    }
+
+    public String getHighest() {
+        return "1. Cisco Systems\n" +
+                "2. Ecolab\n +" +
+                "3. Hasbro";
     }
 }
