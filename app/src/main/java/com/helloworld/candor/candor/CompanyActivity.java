@@ -1169,6 +1169,7 @@ public class CompanyActivity {
         result.add("Windstream Holdings");
         result.add("World Fuel Services");
         result.add("XPO Logistics");
+        result.add("Sears Holdings");
 
         return result;
     }
@@ -1179,6 +1180,7 @@ public class CompanyActivity {
         result.add("Cisco Systems");
         result.add("Ecolab");
         result.add("Hasbro");
+        result.add("PG&E Corp");
 
         return result;
     }
