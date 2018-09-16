@@ -6,21 +6,22 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class CompanyActivity {
-    public static final double aPlus = 83.70;
-    public static final double am = 60.00;
-    public static final double aMinus = 48.30;
-    public static final double bPlus = 43.20;
-    public static final double bm = 38.10;
-    public static final double bMinus = 31.80;
-    public static final double cPlus = 27.50;
-    public static final double cm = 20.70;
-    public static final double cMinus = 15.00;
-    public static final double dPlus = 9.80;
-    public static final double dm = 5.60;
-    public static final double dMinus = 3.90;
-    public static final double fm = 0.80;
+    public static final double APLUS = 83.70;
+    public static final double AA = 60.00;
+    public static final double AMINUS = 48.30;
+    public static final double BPLUS = 43.20;
+    public static final double BB = 38.10;
+    public static final double BMINUS = 31.80;
+    public static final double CPLUS = 27.50;
+    public static final double CC = 20.70;
+    public static final double CMINUS = 15.00;
+    public static final double DPLUS = 9.80;
+    public static final double DD = 5.60;
+    public static final double DMINUS = 3.90;
+    public static final double FF = 0.80;
 
     HashMap<String, Double> hmap = new HashMap<>();
+    HashMap<String, Double> secondMap = new HashMap<>();
 
     public CompanyActivity () {
         hmap.put("Cisco Systems", 83.70);
@@ -28,7 +29,7 @@ public class CompanyActivity {
         hmap.put("Hasbro", 80.00);
         hmap.put("PG&E Corp", 78.50);
         hmap.put("Sealed Air", 78.00);
-        hmap.put("Best Buy Co", 76.30);
+        hmap.put("Best Buy", 76.30);
         hmap.put("Celgene", 71.80);
         hmap.put("Apple", 71.50);
         hmap.put("CMS Energy", 68.80);
