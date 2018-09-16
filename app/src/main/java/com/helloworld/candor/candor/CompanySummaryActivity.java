@@ -90,7 +90,6 @@ public class CompanySummaryActivity extends AppCompatActivity {
 
 }
 
-
 class CustomAdapter extends ArrayAdapter<String> implements View.OnClickListener{
 
     private ArrayList<String> dataSet;
