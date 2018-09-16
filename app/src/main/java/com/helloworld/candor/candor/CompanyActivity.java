@@ -1090,14 +1090,14 @@ public class CompanyActivity {
     }
 
     public double getScoreNum(String x) {
-        if (hmap.containsKey(x)) {
-            return hmap.get(x);
+        if (hmap.containsKey(x.toLowerCase())) {
+            return hmap.get(x.toLowerCase());
         }
         return -1.0;
     }
 
     public String getScoreGrade(String x) {
-        if (!hmap.containsKey(x)) {
+        if (!hmap.containsKey(x.toLowerCase())) {
             return "ERROR";
         }
         if (getScoreNum(x)>60.00) {
@@ -1264,7 +1264,7 @@ public class CompanyActivity {
     public ArrayList<String> getPotentialAlt(String x) {
         ArrayList<String> result = new ArrayList<String>();
         for ( String key : secondMap.keySet() ) {
-            if (secondMap.get(key).equals(secondMap.get(x))) {
+            if (secondMap.get(key).equals(secondMap.get(x.toLowerCase()))) {
                 result.add(key);
             }
         }
