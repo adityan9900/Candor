@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
@@ -63,7 +64,11 @@ public class CompanySummaryActivity extends AppCompatActivity {
         }
         companyName = temp;
 
-        companyNameView.setText(companyName);
+        if(companyName.length() > 26) {
+            companyNameView.setText(companyName.substring(0, 23) + "...");
+        } else {
+            companyNameView.setText(companyName);
+        }
         letterGradeView.setText(letterGrade);
         gradeLayout.setBackgroundColor(color);
 
@@ -86,6 +91,19 @@ public class CompanySummaryActivity extends AppCompatActivity {
                 startActivityForResult(myIntent, MORE_INFO_REQUEST_CODE);
             }
         });
+
+        alternativesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent myIntent = new Intent(view.getContext(), CompanySummaryActivity.class);
+                String compName = test.get(position);
+                myIntent.putExtra("companyName", compName);
+                myIntent.putExtra("letterGrade", companyActivity.getScoreGrade(compName));
+                myIntent.putExtra("color", companyActivity.getColorByName(compName));
+                startActivityForResult(myIntent, 2);
+            }
+        });
+
     }
 
 }
