@@ -183,4 +183,34 @@
 
     </android.support.constraint.ConstraintLayout>
 
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:id="@+id/activity_controller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+        <ExpandableListView
+            android:id="@+id/navList"
+            android:layout_gravity="left|start"
+            android:background="@android:color/white"
+            android:divider="@color/dividerColor"
+            android:dividerHeight="0.5dp"
+            android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+            android:layout_width="235dp"
+            android:layout_height="match_parent">
+
+        </ExpandableListView>
+
+
+    </LinearLayout>
+
+
 </android.support.v4.widget.DrawerLayout>
