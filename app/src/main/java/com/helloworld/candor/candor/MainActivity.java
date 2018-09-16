@@ -45,18 +45,11 @@ public class MainActivity extends AppCompatActivity {
     final int REWARDS_REQUEST_CODE = 2;
     // final int PROMO_REQUEST_CODE = 3;
 
-
-
-
-
-
-
     Button submitCompanyButton;
     Button rewardsButton;
     TextView companyInputTextView;
     TextView blackListOne, blackListTwo, blackListThree;
     CompanyActivity companyActivity;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,16 +57,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setTitle("Menu");
-
-
-
+        getSupportActionBar().setTitle("Candor");
 
         companyActivity = new CompanyActivity();
 

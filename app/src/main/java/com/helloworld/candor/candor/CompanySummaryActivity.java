@@ -69,6 +69,8 @@ public class CompanySummaryActivity extends AppCompatActivity {
         //alternativesList.setAdapter(adapter);
 
         alternativesList.setAdapter(new CustomAdapter(test, getApplicationContext()));
+
+        getSupportActionBar().setTitle("Company Summary");
     }
 
 }
