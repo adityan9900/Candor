@@ -166,4 +166,14 @@ public class CompanyActivity {
                 "2. Ecolab\n +" +
                 "3. Hasbro";
     }
+
+    public int getRanking(String x) {
+        int count = 0;
+        for (double i = getScoreNum(x); i < 83.7; i +=0.1) {
+            if (hmap.containsValue(i)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
