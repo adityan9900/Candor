@@ -584,7 +584,7 @@ public class CompanyActivity {
         secondMap.put("apple", "Information Technology");
         secondMap.put("cms energy", "Utilities");
         secondMap.put("johnson & johnson", "Health Care");
-        secondMap.put("applied Materials", "Information Technology");
+        secondMap.put("applied materials", "Information Technology");
         secondMap.put("exelon", "Utilities");
         secondMap.put("ball", "Materials");
         secondMap.put("hp", "Information Technology");
