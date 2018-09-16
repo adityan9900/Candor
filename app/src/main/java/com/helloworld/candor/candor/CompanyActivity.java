@@ -1193,9 +1193,14 @@ public class CompanyActivity {
         return (count - getRanking(x)) / count;
     }
 
-    /*public ArrayList<String> getPotentialAlt(String x) {
+    public ArrayList<String> getPotentialAlt(String x) {
         ArrayList<String> result = new ArrayList<String>();
-
+        for ( String key : secondMap.keySet() ) {
+            if (secondMap.get(key).equals(secondMap.get(x))) {
+                result.add(key);
+            }
+        }
+        return result;
     }
-    */
+
 }
