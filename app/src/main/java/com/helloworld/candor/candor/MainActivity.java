@@ -1,46 +1,21 @@
 package com.helloworld.candor.candor;
 
-import android.app.ExpandableListActivity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.graphics.Color;
-import android.support.annotation.Nullable;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ExpandableListAdapter;
-import android.widget.ExpandableListView;
-import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.beardedhen.androidbootstrap.TypefaceProvider;
-
-import com.helloworld.candor.candor.Interface.NavigationManager;
-
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-
-import static android.media.CamcorderProfile.get;
 
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener{
@@ -57,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements
     Button submitCompanyButton;
     Button rewardsButton;
     TextView companyInputTextView;
-    TextView blackListOne, blackListTwo, blackListThree;
+    TextView blackListOne, blackListTwo, blackListThree, blackListFour, blackListFive;
     CompanyActivity companyActivity;
 
     @Override
@@ -119,12 +94,34 @@ public class MainActivity extends AppCompatActivity implements
         blackListOne = findViewById(R.id.blackListOne);
         blackListTwo = findViewById(R.id.blackListTwo);
         blackListThree = findViewById(R.id.blackListThree);
+        blackListFour = findViewById(R.id.blackListFour);
+        blackListFive = findViewById(R.id.blackListFive);
 
         TypefaceProvider.registerDefaultIconSets();
 
-        blackListOne.setText(companyActivity.getLowest().get(0));
-        blackListTwo.setText(companyActivity.getLowest().get(1));
-        blackListThree.setText(companyActivity.getLowest().get(2));
+        String one = companyActivity.getLowest().get(0);
+        String two = companyActivity.getLowest().get(0);
+        String three = companyActivity.getLowest().get(0);
+        String four = companyActivity.getLowest().get(0);
+        String five = companyActivity.getLowest().get(0);
+
+        if(one.length() > 20) {
+            one = one.substring(0, 19) + "...";
+        } if(two.length() > 20) {
+            two = two.substring(0, 19) + "...";
+        } if(three.length() > 20) {
+            three = three.substring(0, 19) + "...";
+        } if(four.length() > 20) {
+            four = four.substring(0, 19) + "...";
+        } if(five.length() > 20) {
+            five = five.substring(0, 19) + "...";
+        }
+
+        blackListOne.setText(one);
+        blackListTwo.setText(two);
+        blackListThree.setText(three);
+        blackListFour.setText(four);
+        blackListFive.setText(five);
 
         submitCompanyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,11 +189,11 @@ public class MainActivity extends AppCompatActivity implements
             Intent myIntent = new Intent(MainActivity.this, LeaderBoardActivity.class);
             startActivityForResult(myIntent, 5);
         } else if (id == R.id.nav_slideshow) {
-            //Intent myIntent = new Intent(navigationView.getContext(), .class);
-            //startActivityForResult(myIntent, 6);
+            Intent myIntent = new Intent(MainActivity.this, community_activity.class);
+            startActivityForResult(myIntent, 6);
         } else if (id == R.id.nav_manage) {
-            //Intent myIntent = new Intent(navigationView.getContext(), M.class);
-            //startActivityForResult(myIntent, 7);
+//            Intent myIntent = new Intent(navigationView.getContext(), M.class);
+//            startActivityForResult(myIntent, 7);
         }
         // set item as selected to persist highlight
         menuItem.setChecked(true);
