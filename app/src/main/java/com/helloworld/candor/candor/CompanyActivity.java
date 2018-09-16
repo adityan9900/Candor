@@ -3,7 +3,9 @@ package com.helloworld.candor.candor;
 import java.util.HashMap;
 import java.util.ArrayList;
 
+
 public class CompanyActivity {
+
     public static final double APLUS = 83.70;
     public static final double AA = 60.00;
     public static final double AMINUS = 48.30;
@@ -1161,16 +1163,24 @@ public class CompanyActivity {
         }
     }
 
-    public String getLowest() {
-        return "1. Windstream Holdings\n" +
-                "2. World Fuel Services\n +" +
-                "3. XPO Logistics";
+    public ArrayList<String> getLowest() {
+        ArrayList<java.lang.String> result = new ArrayList<String>();
+
+        result.add("Windstream Holdings");
+        result.add("World Fuel Services");
+        result.add("XPO Logistics");
+
+        return result;
     }
 
-    public String getHighest() {
-        return "1. Cisco Systems\n" +
-                "2. Ecolab\n +" +
-                "3. Hasbro";
+    public ArrayList<String> getHighest() {
+        ArrayList<java.lang.String> result = new ArrayList<String>();
+
+        result.add("Cisco Systems");
+        result.add("Ecolab");
+        result.add("Hasbro");
+
+        return result;
     }
 
     public int getRanking(String x) {
