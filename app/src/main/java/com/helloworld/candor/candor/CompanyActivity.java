@@ -24,6 +24,8 @@ public class CompanyActivity {
     HashMap<String, Double> secondMap = new HashMap<>();
 
     public CompanyActivity () {
+        hmap.put("ManpowerGroup", 43.70);
+        hmap.put("Entergy", 43.30);
         hmap.put("Cisco Systems", 83.70);
         hmap.put("Ecolab", 81.60);
         hmap.put("Hasbro", 80.00);
