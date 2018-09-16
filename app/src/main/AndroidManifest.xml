@@ -25,6 +25,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.helloworld.candor.candor.MainActivity" />
         </activity>
+        <activity
+            android:name=".MoreInformationActivity"
+            android:label="@string/title_activity_more_information"
+            android:parentActivityName=".CompanySummaryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.helloworld.candor.candor.CompanySummaryActivity" />
+        </activity>
     </application>
 
 </manifest>

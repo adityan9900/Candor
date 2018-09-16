@@ -1,6 +1,7 @@
 package com.helloworld.candor.candor;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
@@ -13,6 +14,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -25,8 +27,11 @@ public class CompanySummaryActivity extends AppCompatActivity {
     String companyName, letterGrade;
     TextView companyNameView, letterGradeView;
     ListView alternativesList;
+    ImageButton moreInformationButton;
     int color;
     CompanyActivity companyActivity;
+
+    final int MORE_INFO_REQUEST_CODE = 3;
 
     ArrayAdapter<String> adapter;
     ArrayList<String> test;
@@ -45,6 +50,7 @@ public class CompanySummaryActivity extends AppCompatActivity {
         companyNameView = findViewById(R.id.companyNameView);
         letterGradeView = findViewById(R.id.letterGradeView);
         alternativesList = findViewById(R.id.alternativesList);
+        moreInformationButton = findViewById(R.id.moreInfoButton);
 
         companyName = getIntent().getExtras().get("companyName").toString();
         letterGrade = getIntent().getExtras().get("letterGrade").toString();
@@ -71,6 +77,15 @@ public class CompanySummaryActivity extends AppCompatActivity {
         alternativesList.setAdapter(new CustomAdapter(test, getApplicationContext()));
 
         getSupportActionBar().setTitle("Company Summary");
+
+        moreInformationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(v.getContext(), MoreInformationActivity.class);
+                myIntent.putExtra("companyName", companyName);
+                startActivityForResult(myIntent, MORE_INFO_REQUEST_CODE);
+            }
+        });
     }
 
 }
