@@ -1098,7 +1098,9 @@ public class CompanyActivity {
     }
 
     public String getScoreGrade(String x) {
+        System.out.println(x);
         if (!hmap.containsKey(x.toLowerCase())) {
+            System.out.println(x);
             return "ERROR";
         }
         if (getScoreNum(x)>60.00) {
@@ -1232,19 +1234,19 @@ public class CompanyActivity {
 
         Random rand = new Random();
         int a =  rand.nextInt(temp.size());
-        result.add(temp.get(a));
+        result.add(makeUpper(temp.get(a)));
         temp.remove(a);
         int b =  rand.nextInt(temp.size());
-        result.add(temp.get(b));
+        result.add(makeUpper(temp.get(b)));
         temp.remove(b);
         int c =  rand.nextInt(temp.size());
-        result.add(temp.get(c));
+        result.add(makeUpper(temp.get(c)));
         temp.remove(c);
         int d =  rand.nextInt(temp.size());
-        result.add(temp.get(d));
+        result.add(makeUpper(temp.get(d)));
         temp.remove(d);
         int e =  rand.nextInt(temp.size());
-        result.add(temp.get(e));
+        result.add(makeUpper(temp.get(e)));
         temp.remove(e);
 
         return result;
