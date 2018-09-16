@@ -1274,7 +1274,10 @@ public class CompanyActivity {
     public ArrayList<String> getPotentialAlt(String x) {
         ArrayList<String> result = new ArrayList<String>();
         for ( String key : secondMap.keySet() ) {
-            if (secondMap.get(key).equals(secondMap.get(x.toLowerCase()))) {
+            if (key.equals(x)) {
+                continue;
+            }
+            else if (secondMap.get(key).equals(secondMap.get(x.toLowerCase()))) {
                 result.add(key);
             }
         }
