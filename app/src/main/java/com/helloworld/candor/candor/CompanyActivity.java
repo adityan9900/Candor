@@ -1,5 +1,8 @@
 package com.helloworld.candor.candor;
 
+import android.graphics.Color;
+import android.widget.Toast;
+
 import java.util.HashMap;
 import java.util.ArrayList;
 
@@ -22,6 +25,48 @@ public class CompanyActivity {
 
     HashMap<String, Double> hmap = new HashMap<>();
     HashMap<String, String> secondMap = new HashMap<>();
+
+    public int getColorByName(String x) {
+        int color;
+        if (getScoreNum(x)>60.00) {
+            color = Color.rgb(53, 244, 107);
+        }
+        else if (getScoreNum(x)>48.30) {
+            color = Color.rgb(53, 244, 107);
+        }
+        else if (getScoreNum(x)>43.20) {
+            color = Color.rgb(53, 244, 107);
+        }
+        else if (getScoreNum(x)>38.10) {
+            color = Color.rgb(136, 244, 53);
+        }
+        else if (getScoreNum(x)>31.80) {
+            color = Color.rgb(136, 244, 53);
+        }
+        else if (getScoreNum(x)>27.50) {
+            color = Color.rgb(136, 244, 53);
+        }
+        else if (getScoreNum(x)>20.70) {
+            color = Color.rgb(238, 255, 12);
+        }
+        else if (getScoreNum(x)>15.00) {
+            color = Color.rgb(238, 255, 12);
+        }
+        else if (getScoreNum(x)>9.80) {
+            color = Color.rgb(238, 255, 12);
+        }
+        else if (getScoreNum(x)>5.60) {
+            color = Color.rgb(239, 135, 0);
+        }
+        else if (getScoreNum(x)>3.90) {
+            color = Color.rgb(239, 135, 0);
+        }
+        else if (getScoreNum(x)>0.80) {
+            color = Color.rgb(239, 135, 0);
+        }
+        else color = Color.rgb(194, 1, 4);
+        return color;
+    }
 
     public CompanyActivity () {
         hmap.put("ManpowerGroup", 43.70);
