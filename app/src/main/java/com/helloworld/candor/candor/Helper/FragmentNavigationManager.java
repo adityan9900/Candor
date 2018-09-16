@@ -1,9 +1,14 @@
 package com.helloworld.candor.candor.Helper;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 
+import com.helloworld.candor.candor.BuildConfig;
+import com.helloworld.candor.candor.Fragments.FragmentContent;
 import com.helloworld.candor.candor.Interface.NavigationManager;
 import com.helloworld.candor.candor.MainActivity;
+import com.helloworld.candor.candor.R;
 
 public class FragmentNavigationManager implements NavigationManager{
 
@@ -31,8 +36,23 @@ public class FragmentNavigationManager implements NavigationManager{
     @Override
     public void showFragment (String title){
 
-
+       showFragment(FragmentContent.newInstance(title),false);
 
 
     }
+
+    private void showFragment(Fragment fragmentContent, boolean b) {
+        FragmentManager fm = mFragmentManager;
+        FragmentTransaction ft= fm.beginTransaction().replace(R.id.container, fragmentContent);
+        ft.addToBackStack(null);
+        if(b || !BuildConfig.DEBUG)
+            ft.commitAllowingStateLoss();
+        else
+            ft.commit();
+        fm.executePendingTransactions();
+    }
+
+
 }
+
+

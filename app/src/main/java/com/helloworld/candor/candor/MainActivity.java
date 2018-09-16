@@ -2,7 +2,9 @@ package com.helloworld.candor.candor;
 
 import android.app.ExpandableListActivity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
+import android.support.annotation.Nullable;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -72,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mDrawerLayout= findViewById(R.id.drawer_layout);
+        mDrawerLayout= (DrawerLayout)findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
-        expandableListView = findViewById(R.id.navList);
+        expandableListView = (ExpandableListView)findViewById(R.id.navList);
         navigationManager = FragmentNavigationManager.getmInstance(this);
 
         initItems();
@@ -174,6 +176,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
+
+        if(mDrawerToggle.onOptionsItemSelected(item))
+            return true;
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -187,12 +193,7 @@ public class MainActivity extends AppCompatActivity {
 
         lstTitle = new ArrayList<>(lstChild.keySet());
 
-
-
-
-
     }
-
 
     private void initItems(){
 
@@ -248,13 +249,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDrawerOpened(View drawerView){
                 super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("Menu");
+                //getSupportActionBar().setTitle("Menu");
                 invalidateOptionsMenu();
             }
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
-                getSupportActionBar().setTitle(mActivityTitle);
+                //getSupportActionBar().setTitle(mActivityTitle);
                 invalidateOptionsMenu();
 
             }
@@ -273,4 +274,16 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setTitle(firstItem);
         }
     }
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState){
+        super.onPostCreate(savedInstanceState);
+        mDrawerToggle.syncState();
+    }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
+
+    }
+
 }

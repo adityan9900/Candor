@@ -2,8 +2,9 @@ package com.helloworld.candor.candor.Fragments;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
+
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,7 @@ public class FragmentContent extends Fragment {
     }
 
 
-    public static FragmentContent newInstance(String param1, String param2) {
+    public static FragmentContent newInstance(String param1) {
         FragmentContent fragment = new FragmentContent();
         Bundle args = new Bundle();
         args.putString(KEY_TITLE, param1);
