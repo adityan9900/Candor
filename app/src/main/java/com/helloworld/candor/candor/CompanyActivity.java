@@ -581,7 +581,7 @@ public class CompanyActivity {
         secondMap.put("best buy co", "Consumer Discretionary");
         secondMap.put("celgene", "Health Care");
         secondMap.put("apple", "Information Technology");
-        secondMap.put("cms Energy", "Utilities");
+        secondMap.put("cms energy", "Utilities");
         secondMap.put("johnson & johnson", "Health Care");
         secondMap.put("applied Materials", "Information Technology");
         secondMap.put("exelon", "Utilities");
@@ -592,7 +592,7 @@ public class CompanyActivity {
         secondMap.put("microsoft", "Information Technology");
         secondMap.put("humana", "Health Care");
         secondMap.put("merck & co", "Health Care");
-        secondMap.put("eversource Energy", "Utilities");
+        secondMap.put("eversource energy", "Utilities");
         secondMap.put("hershey", "Consumer Staples");
         secondMap.put("boeing", "industrials");
         secondMap.put("raytheon", "industrials");
@@ -644,7 +644,7 @@ public class CompanyActivity {
         secondMap.put("schlumberger nv", "Energy");
         secondMap.put("dow chemical", "Materials");
         secondMap.put("state street corp", "Financials");
-        secondMap.put("duke Energy", "Utilities");
+        secondMap.put("duke energy", "Utilities");
         secondMap.put("visa", "Information Technology");
         secondMap.put("international business machines", "Information Technology");
         secondMap.put("masco", "industrials");
@@ -658,7 +658,7 @@ public class CompanyActivity {
         secondMap.put("eli lilly and co", "Health Care");
         secondMap.put("intel", "Information Technology");
         secondMap.put("altria group", "Consumer Staples");
-        secondMap.put("sempra Energy", "Utilities");
+        secondMap.put("sempra energy", "Utilities");
         secondMap.put("united parcel service", "industrials");
         secondMap.put("american express", "Financials");
         secondMap.put("pepsico", "Consumer Staples");
@@ -681,11 +681,11 @@ public class CompanyActivity {
         secondMap.put("xerox", "Information Technology");
         secondMap.put("unum group", "Financials");
         secondMap.put("simon property group", "Real Estate");
-        secondMap.put("xcel Energy", "Utilities");
+        secondMap.put("xcel energy", "Utilities");
         secondMap.put("jm smucker", "Consumer Staples");
         secondMap.put("norfolk southern", "industrials");
         secondMap.put("aes", "Utilities");
-        secondMap.put("nextera Energy", "Utilities");
+        secondMap.put("nextera energy", "Utilities");
         secondMap.put("wal-mart stores", "Consumer Staples");
         secondMap.put("waste management", "industrials");
         secondMap.put("jabil", "Information Technology");
@@ -721,22 +721,22 @@ public class CompanyActivity {
         secondMap.put("at&t", "Telecommunication Services");
         secondMap.put("jpmorgan chase & co", "Financials");
         secondMap.put("thermo fischer scientific", "Health Care");
-        secondMap.put("nrg Energy", "Utilities");
+        secondMap.put("nrg energy", "Utilities");
         secondMap.put("lincoln national", "Financials");
         secondMap.put("alcoa", "Materials");
         secondMap.put("aecom", "industrials");
         secondMap.put("autoliv", "Consumer Discretionary");
-        secondMap.put("wec Energy group", "Utilities");
+        secondMap.put("wec energy group", "Utilities");
         secondMap.put("alliance data systems", "Information Technology");
         secondMap.put("newmont mining ", "Materials");
-        secondMap.put("dte Energy", "Utilities");
+        secondMap.put("dte energy", "Utilities");
         secondMap.put("procter & gamble", "Consumer Staples");
         secondMap.put("hartford financial services group", "Financials");
         secondMap.put("kohls", "Consumer Discretionary");
         secondMap.put("motorola solutions", "Information Technology");
         secondMap.put("yum! brands", "Consumer Discretionary");
         secondMap.put("quanta services", "industrials");
-        secondMap.put("devon Energy", "Energy");
+        secondMap.put("devon energy", "Energy");
         secondMap.put("general motors", "Consumer Discretionary");
         secondMap.put("textron", "industrials");
         secondMap.put("rockwell collins", "industrials");
@@ -744,7 +744,7 @@ public class CompanyActivity {
         secondMap.put("edison international", "Utilities");
         secondMap.put("carnival", "Consumer Discretionary");
         secondMap.put("constellation brands", "Consumer Staples");
-        secondMap.put("valero Energy", "Energy");
+        secondMap.put("valero energy", "Energy");
         secondMap.put("w w grainger", "industrials");
         secondMap.put("lkq", "Consumer Discretionary");
         secondMap.put("anadarko petroleum", "Energy");
@@ -787,7 +787,7 @@ public class CompanyActivity {
         secondMap.put("coca-cola co", "Consumer Staples");
         secondMap.put("southern co", "Utilities");
         secondMap.put("deere & co", "industrials");
-        secondMap.put("dominion Energy", "Utilities");
+        secondMap.put("dominion energy", "Utilities");
         secondMap.put("southern copper", "Materials");
         secondMap.put("american electric power company", "Utilities");
         secondMap.put("cintas", "industrials");
@@ -801,11 +801,11 @@ public class CompanyActivity {
         secondMap.put("level 3 communications", "Telecommunication Services");
         secondMap.put("vf", "Consumer Discretionary");
         secondMap.put("centurylink", "Telecommunication Services");
-        secondMap.put("centerpoint Energy", "Utilities");
+        secondMap.put("centerpoint energy", "Utilities");
         secondMap.put("arconic", "industrials");
         secondMap.put("macy's", "Consumer Discretionary");
         secondMap.put("u.s. bancorp", "Financials");
-        secondMap.put("chesapeake Energy", "Energy");
+        secondMap.put("chesapeake energy", "Energy");
         secondMap.put("illinois tool works", "industrials");
         secondMap.put("berry global group", "Materials");
         secondMap.put("ryder system", "industrials");
@@ -824,7 +824,7 @@ public class CompanyActivity {
         secondMap.put("nielsen holdings", "industrials");
         secondMap.put("hollyfrontier", "Energy");
         secondMap.put("navistar international", "industrials");
-        secondMap.put("firstEnergy", "Utilities");
+        secondMap.put("firstenergy", "Utilities");
         secondMap.put("automatic data processing", "Information Technology");
         secondMap.put("aramark", "Consumer Discretionary");
         secondMap.put("univar", "industrials");
@@ -877,7 +877,7 @@ public class CompanyActivity {
         secondMap.put("gilead sciences", "Health Care");
         secondMap.put("liberty interactive", "Consumer Discretionary");
         secondMap.put("national oilwell varco", "Energy");
-        secondMap.put("vistra Energy", "Utilities");
+        secondMap.put("vistra energy", "Utilities");
         secondMap.put("westlake chemical", "Materials");
         secondMap.put("zimmer biornet holdings", "Health Care");
         secondMap.put("progressive", "Financials");
@@ -927,11 +927,11 @@ public class CompanyActivity {
         secondMap.put("amerisourcebergen", "Health Care");
         secondMap.put("c.h. robinson worldwide", "industrials");
         secondMap.put("celanese", "Materials");
-        secondMap.put("Energy transfer equity", "Energy");
+        secondMap.put("energy transfer equity", "Energy");
         secondMap.put("enterprise products partners", "Energy");
         secondMap.put("mastercard", "Information Technology");
         secondMap.put("netflix", "Consumer Discretionary");
-        secondMap.put("pbf Energy", "Energy");
+        secondMap.put("pbf energy", "Energy");
         secondMap.put("rr donnelley & sons co", "industrials");
         secondMap.put("ugi", "Utilities");
         secondMap.put("williams partners", "Energy");
@@ -1010,7 +1010,7 @@ public class CompanyActivity {
         secondMap.put("dish network", "Consumer Discretionary");
         secondMap.put("dollar general", "Consumer Discretionary");
         secondMap.put("dollar tree", "Consumer Discretionary");
-        secondMap.put("Energy transfer partners", "Energy");
+        secondMap.put("energy transfer partners", "Energy");
         secondMap.put("essendant", "industrials");
         secondMap.put("expedia", "Consumer Discretionary");
         secondMap.put("expeditors international of washington", "industrials");
@@ -1040,7 +1040,7 @@ public class CompanyActivity {
         secondMap.put("live nation entertainment", "Consumer Discretionary");
         secondMap.put("ncr", "Information Technology");
         secondMap.put("netapp", "Information Technology");
-        secondMap.put("ngl Energy partners", "Energy");
+        secondMap.put("ngl energy partners", "Energy");
         secondMap.put("nvr", "Consumer Discretionary");
         secondMap.put("olin", "Materials");
         secondMap.put("patterson companies", "Health Care");
@@ -1274,7 +1274,10 @@ public class CompanyActivity {
     public ArrayList<String> getPotentialAlt(String x) {
         ArrayList<String> result = new ArrayList<String>();
         for ( String key : secondMap.keySet() ) {
-            if (secondMap.get(key).equals(secondMap.get(x.toLowerCase()))) {
+            if (key.equals(x)) {
+                continue;
+            }
+            else if (secondMap.get(key).equals(secondMap.get(x.toLowerCase()))) {
                 result.add(key);
             }
         }

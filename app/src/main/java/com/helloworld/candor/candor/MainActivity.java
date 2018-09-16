@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     final int COMPANY_SUMMARY_REQUEST_CODE = 1;
     final int REWARDS_REQUEST_CODE = 2;
-    // final int PROMO_REQUEST_CODE = 3;
+    final int BAR_REQUEST_CODE = 3;
 
     Button submitCompanyButton;
     Button rewardsButton;
@@ -75,18 +75,26 @@ public class MainActivity extends AppCompatActivity {
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        final NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        // set item as selected to persist highlight
+                         //   public newAdapterView.OnClickListener()
+
                         menuItem.setChecked(true);
-                        // close drawer when item is tapped
+
                         mDrawerLayout.closeDrawers();
 
-                        // Add code here to update the UI based on the item selected
-                        // For example, swap UI fragments here
+
+                        //String location = menuItem + "Activity.class" ;
+
+                        //System.out.println(location+" " + menuItem)
+                        Intent myIntent = new Intent(MainActivity.this,RewardsActivity.class);
+                        MainActivity.this.startActivity(myIntent);
+
+
+
 
                         return true;
                     }
@@ -124,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         companyActivity = new CompanyActivity();
 
         submitCompanyButton = findViewById(R.id.submitCompanyButton);
-        rewardsButton = findViewById(R.id.rewardsButton);
+        //rewardsButton = findViewById(R.id.rewardsButton);
         companyInputTextView = findViewById(R.id.companyInputTextView);
         blackListOne = findViewById(R.id.blackListOne);
         blackListTwo = findViewById(R.id.blackListTwo);
@@ -178,14 +186,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        rewardsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(v.getContext(), RewardsActivity.class);
-                startActivityForResult(myIntent, REWARDS_REQUEST_CODE);
 
-            }
-        });
 
     }
     @Override
