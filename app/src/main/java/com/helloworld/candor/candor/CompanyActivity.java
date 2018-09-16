@@ -5,6 +5,7 @@ import android.widget.Toast;
 import java.util.Random;
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class CompanyActivity {
@@ -1295,14 +1296,11 @@ public class CompanyActivity {
     }
 
     public String makeUpper(String x){
-        int stat = 0;
-        String tempo = x.substring(0,1).toUpperCase();
-        while (x.indexOf(" ", stat) != -1) {
-            // cap first letter
-            tempo += x.substring(1, x.indexOf(" ", stat)+1);
-            tempo += x.substring(x.indexOf(" ", stat)+1,x.indexOf(" ", stat)+2).toUpperCase();
-            tempo += x.substring(x.indexOf(" ", stat)+1);
-            stat = x.indexOf(" ", stat)+1;
+        String tempo = "";
+        Scanner lineScan = new Scanner(x);
+        while (lineScan.hasNext()) {
+            String word = lineScan.next();
+            tempo += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ";
         }
         return tempo;
     }
