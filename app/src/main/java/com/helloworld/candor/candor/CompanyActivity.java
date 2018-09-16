@@ -1257,6 +1257,7 @@ public class CompanyActivity {
     public int getRanking(String x) {
         int count = 1;
         for (double i = getScoreNum(x) + 0.1; i < 83.7; i +=0.1) {
+            i = Math.round(i * 10.0) / 10.0;
             for ( String key : hmap.keySet() ) {
                 if (hmap.get(key) == i) {
                     count++;
@@ -1267,7 +1268,7 @@ public class CompanyActivity {
     }
 
     public double getPercentile(String x) {
-        return (500 - getRanking(x)) / 500;
+        return (500.0 - getRanking(x)) / 500.0;
     }
 
     public ArrayList<String> getPotentialAlt(String x) {
