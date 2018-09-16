@@ -671,4 +671,14 @@ public class CompanyActivity {
         }
         return count;
     }
+
+    public double getPercentile(String x) {
+        int count = 1;
+        for (double i = 0.0; i < 83.7; i +=0.1) {
+            if (hmap.containsValue(i)) {
+                count++;
+            }
+        }
+        return (count - getRanking(x)) / count;
+    }
 }
