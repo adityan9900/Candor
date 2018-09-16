@@ -25,11 +25,10 @@ public class RewardsActivity extends AppCompatActivity {
     ImageButton revertSix;
     ImageButton promoSeven;
     ImageButton revertSeven;
-    ImageButton PromoEight;
-    ImageButton revertEight;
 
 
-    
+
+
 
 
 
@@ -46,6 +45,24 @@ public class RewardsActivity extends AppCompatActivity {
 
         promoOne = (findViewById(R.id.buttonOne));
         revertOne = (findViewById(R.id.promoCode));
+
+        promoTwo = (findViewById(R.id.buttonTwo));
+        revertTwo = (findViewById(R.id.promoCodeTwo));
+
+        promoThree = (findViewById(R.id.buttonThree));
+        revertThree = (findViewById(R.id.promoCodeThree));
+
+        promoFour = (findViewById(R.id.buttonFour));
+        revertFour = (findViewById(R.id.promoCodeFour));
+
+        promoFive = (findViewById(R.id.buttonFive));
+        revertFive = (findViewById(R.id.promoCodeFive));
+
+        promoSix = (findViewById(R.id.buttonSix));
+        revertSix = (findViewById(R.id.buttonSix));
+
+        promoSeven = (findViewById(R.id.buttonSeven));
+        revertSeven = (findViewById(R.id.buttonSeven));
 
 
         promoOne.setOnClickListener(new View.OnClickListener() {
@@ -74,5 +91,169 @@ public class RewardsActivity extends AppCompatActivity {
         }
 
     });
+
+        promoTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //int tester=counter;
+                if(promoTwo.getVisibility()== View.INVISIBLE) {
+                    findViewById(R.id.buttonTwo).setVisibility(View.VISIBLE);
+
+                }else{
+                    findViewById(R.id.buttonTwo).setVisibility(View.INVISIBLE);
+
+                }
+            }
+
+        });
+
+        revertTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(promoTwo.getVisibility()==View.INVISIBLE) {
+                    findViewById(R.id.buttonTwo).setVisibility(View.VISIBLE);
+                }else{
+                    findViewById(R.id.buttonTwo).setVisibility(View.INVISIBLE);
+                }
+            }
+
+        });
+
+        promoThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //int tester=counter;
+                if(promoThree.getVisibility()== View.INVISIBLE) {
+                    findViewById(R.id.buttonThree).setVisibility(View.VISIBLE);
+
+                }else{
+                    findViewById(R.id.buttonThree).setVisibility(View.INVISIBLE);
+
+                }
+            }
+
+        });
+
+        revertThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(promoThree.getVisibility()==View.INVISIBLE) {
+                    findViewById(R.id.buttonThree).setVisibility(View.VISIBLE);
+                }else{
+                    findViewById(R.id.buttonThree).setVisibility(View.INVISIBLE);
+                }
+            }
+
+
+
+        });
+
+        promoFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //int tester=counter;
+                if(promoFour.getVisibility()== View.INVISIBLE) {
+                    findViewById(R.id.buttonFour).setVisibility(View.VISIBLE);
+
+                }else{
+                    findViewById(R.id.buttonFour).setVisibility(View.INVISIBLE);
+
+                }
+            }
+
+        });
+
+        revertFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(promoFour.getVisibility()==View.INVISIBLE) {
+                    findViewById(R.id.buttonFour).setVisibility(View.VISIBLE);
+                }else{
+                    findViewById(R.id.buttonFour).setVisibility(View.INVISIBLE);
+                }
+            }
+
+        });
+
+        promoFive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //int tester=counter;
+                if(promoFive.getVisibility()== View.INVISIBLE) {
+                    findViewById(R.id.buttonFive).setVisibility(View.VISIBLE);
+
+                }else{
+                    findViewById(R.id.buttonFive).setVisibility(View.INVISIBLE);
+
+                }
+            }
+
+        });
+
+        revertFive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(promoFive.getVisibility()==View.INVISIBLE) {
+                    findViewById(R.id.buttonFive).setVisibility(View.VISIBLE);
+                }else{
+                    findViewById(R.id.buttonFive).setVisibility(View.INVISIBLE);
+                }
+            }
+
+        });
+
+        promoSix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //int tester=counter;
+                if(promoSix.getVisibility()== View.INVISIBLE) {
+                    findViewById(R.id.buttonSix).setVisibility(View.VISIBLE);
+
+                }else{
+                    findViewById(R.id.buttonSix).setVisibility(View.INVISIBLE);
+
+                }
+            }
+
+        });
+
+        revertSix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(promoSix.getVisibility()==View.INVISIBLE) {
+                    findViewById(R.id.buttonSix).setVisibility(View.VISIBLE);
+                }else{
+                    findViewById(R.id.buttonSix).setVisibility(View.INVISIBLE);
+                }
+            }
+
+        });
+
+        promoSeven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //int tester=counter;
+                if(promoSeven.getVisibility()== View.INVISIBLE) {
+                    findViewById(R.id.buttonSeven).setVisibility(View.VISIBLE);
+
+                }else{
+                    findViewById(R.id.buttonSeven).setVisibility(View.INVISIBLE);
+
+                }
+            }
+
+        });
+
+        revertSeven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(promoSeven.getVisibility()==View.INVISIBLE) {
+                    findViewById(R.id.buttonSeven).setVisibility(View.VISIBLE);
+                }else{
+                    findViewById(R.id.buttonSeven).setVisibility(View.INVISIBLE);
+                }
+            }
+
+        });
 }
 }
