@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity implements
             Intent myIntent = new Intent(MainActivity.this, RewardsActivity.class);
             startActivityForResult(myIntent, 4);
         } else if (id == R.id.nav_gallery) {
-            Intent myIntent = new Intent(MainActivity.this, RewardsActivity.class);
+            Intent myIntent = new Intent(MainActivity.this, LeaderBoardActivity.class);
             startActivityForResult(myIntent, 5);
         } else if (id == R.id.nav_slideshow) {
             //Intent myIntent = new Intent(navigationView.getContext(), .class);
