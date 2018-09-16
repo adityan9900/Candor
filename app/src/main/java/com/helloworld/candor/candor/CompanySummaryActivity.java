@@ -19,6 +19,7 @@ public class CompanySummaryActivity extends AppCompatActivity {
     String companyName, letterGrade;
     TextView companyNameView, letterGradeView;
     ListView alternativesList;
+    int color;
 
     ArrayAdapter<String> adapter;
     ArrayList<String> test;
@@ -30,6 +31,8 @@ public class CompanySummaryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_company_summary);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
 
         test = new ArrayList<>();
         test.add("Test1");
@@ -45,14 +48,25 @@ public class CompanySummaryActivity extends AppCompatActivity {
         test.add("Test2");
 
         gradeLayout = findViewById(R.id.gradeLayout);
-        gradeLayout.setBackgroundColor(Color.RED);
         companyNameView = findViewById(R.id.companyNameView);
         letterGradeView = findViewById(R.id.letterGradeView);
         alternativesList = findViewById(R.id.alternativesList);
-        companyName = "C O M P A N Y";
-        letterGrade = "A+";
+
+        companyName = getIntent().getExtras().get("companyName").toString();
+        letterGrade = getIntent().getExtras().get("letterGrade").toString();
+        color = (Integer)(getIntent().getExtras().get("color"));
+
+        companyName = companyName.toUpperCase();
+
+        String temp = "";
+        for(int i = 0; i < companyName.length(); i ++) {
+            temp += companyName.charAt(i) + " ";
+        }
+        companyName = temp;
+
         companyNameView.setText(companyName);
         letterGradeView.setText(letterGrade);
+        gradeLayout.setBackgroundColor(color);
 
         adapter = new ArrayAdapter<String>(getApplicationContext(),
                 android.R.layout.simple_list_item_1,
