@@ -13,7 +13,7 @@ public class MoreInformationActivity extends AppCompatActivity {
     TextView rankText;
     TextView percentText;
     TextView compName;
-    EditText descripText;
+    TextView descripText;
     String companyName;
     CompanyActivity companyActivity;
 
@@ -32,7 +32,16 @@ public class MoreInformationActivity extends AppCompatActivity {
         percentText = findViewById(R.id.percentText);
         descripText = findViewById(R.id.descripText);
 
-        //compNAme.setText();
+        System.out.println("HERE " + companyName);
+
+        rankText.setText(companyActivity.getRanking(companyName) + "");
+        String temp = "";
+        for(int i = 0; i < companyName.length(); i ++) {
+            temp += (companyName.charAt(i) + " ").toUpperCase();
+        }
+        compName.setText(temp);
+        percentText.setText("" + companyActivity.getPercentile(companyName) * 100 + "%");
+        descripText.setText(companyActivity.getDescriptor(companyName));
     }
 
 

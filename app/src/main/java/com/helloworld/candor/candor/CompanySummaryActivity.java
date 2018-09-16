@@ -56,18 +56,15 @@ public class CompanySummaryActivity extends AppCompatActivity {
         color = (Integer)(getIntent().getExtras().get("color"));
         test = companyActivity.getPotentialAlt(companyName);
 
-        companyName = companyName.toUpperCase();
-
         String temp = "";
         for(int i = 0; i < companyName.length(); i ++) {
-            temp += companyName.charAt(i) + " ";
+            temp += (companyName.charAt(i) + " ").toUpperCase();
         }
-        companyName = temp;
 
-        if(companyName.length() > 26) {
-            companyNameView.setText(companyName.substring(0, 23) + "...");
+        if(temp.length() > 26) {
+            companyNameView.setText(temp.substring(0, 23) + "...");
         } else {
-            companyNameView.setText(companyName);
+            companyNameView.setText(temp);
         }
         letterGradeView.setText(letterGrade);
         gradeLayout.setBackgroundColor(color);
