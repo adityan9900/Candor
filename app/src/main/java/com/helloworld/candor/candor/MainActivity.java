@@ -186,11 +186,11 @@ public class MainActivity extends AppCompatActivity implements
         int id = menuItem.getItemId();
         if(id == R.id.nav_Rewards) {
             System.out.println("HERE REWARDS");
-            Intent myIntent = new Intent(menuItem.getActionView().getContext(), RewardsActivity.class);
+            Intent myIntent = new Intent(MainActivity.this, RewardsActivity.class);
             startActivityForResult(myIntent, 4);
         } else if (id == R.id.nav_gallery) {
-            //Intent myIntent = new Intent(navigationView.getContext(), RewardsActivity.class);
-            //startActivityForResult(myIntent, 5);
+            Intent myIntent = new Intent(MainActivity.this, RewardsActivity.class);
+            startActivityForResult(myIntent, 5);
         } else if (id == R.id.nav_slideshow) {
             //Intent myIntent = new Intent(navigationView.getContext(), .class);
             //startActivityForResult(myIntent, 6);
