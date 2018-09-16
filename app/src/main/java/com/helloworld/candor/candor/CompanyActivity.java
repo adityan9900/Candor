@@ -1239,6 +1239,12 @@ public class CompanyActivity {
         int c =  rand.nextInt(temp.size());
         result.add(temp.get(c));
         temp.remove(c);
+        int d =  rand.nextInt(temp.size());
+        result.add(temp.get(d));
+        temp.remove(d);
+        int e =  rand.nextInt(temp.size());
+        result.add(temp.get(e));
+        temp.remove(e);
 
         return result;
     }
