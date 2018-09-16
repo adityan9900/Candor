@@ -28,6 +28,7 @@ public class CompanySummaryActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_summary);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         test = new ArrayList<>();
