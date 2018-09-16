@@ -2,7 +2,7 @@ package com.helloworld.candor.candor;
 
 import android.graphics.Color;
 import android.widget.Toast;
-
+import java.util.Random;
 import java.util.HashMap;
 import java.util.ArrayList;
 
@@ -1221,11 +1221,24 @@ public class CompanyActivity {
 
     public ArrayList<String> getLowest() {
         ArrayList<java.lang.String> result = new ArrayList<String>();
+        ArrayList<java.lang.String> temp = new ArrayList<String>();
 
-        result.add("Windstream Holdings");
-        result.add("World Fuel Services");
-        result.add("XPO Logistics");
-        result.add("Sears Holdings");
+        for ( String key : hmap.keySet() ) {
+            if (hmap.get(key) ==  0.00) {
+                temp.add(key);
+            }
+        }
+
+        Random rand = new Random();
+        int a =  rand.nextInt(temp.size());
+        result.add(temp.get(a));
+        temp.remove(a);
+        int b =  rand.nextInt(temp.size());
+        result.add(temp.get(b));
+        temp.remove(b);
+        int c =  rand.nextInt(temp.size());
+        result.add(temp.get(c));
+        temp.remove(c);
 
         return result;
     }
