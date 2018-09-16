@@ -42,7 +42,8 @@ import java.util.TreeMap;
 
 import static android.media.CamcorderProfile.get;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener{
 
 
 
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
-
+//
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -75,30 +76,11 @@ public class MainActivity extends AppCompatActivity {
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
-        final NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-                         //   public newAdapterView.OnClickListener()
-
-                        menuItem.setChecked(true);
-
-                        mDrawerLayout.closeDrawers();
-
-
-                        //String location = menuItem + "Activity.class" ;
-
-                        //System.out.println(location+" " + menuItem)
-                        Intent myIntent = new Intent(MainActivity.this,RewardsActivity.class);
-                        MainActivity.this.startActivity(myIntent);
-
-
-
-
-                        return true;
-                    }
-                });
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.bringToFront();
+        if (navigationView != null) {
+            navigationView.setNavigationItemSelectedListener(this);
+        }
 
         mDrawerLayout.addDrawerListener(
                 new DrawerLayout.DrawerListener() {
@@ -199,6 +181,33 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public boolean onNavigationItemSelected(MenuItem menuItem) {
+        int id = menuItem.getItemId();
+        if(id == R.id.nav_Rewards) {
+            System.out.println("HERE REWARDS");
+            Intent myIntent = new Intent(menuItem.getActionView().getContext(), RewardsActivity.class);
+            startActivityForResult(myIntent, 4);
+        } else if (id == R.id.nav_gallery) {
+            //Intent myIntent = new Intent(navigationView.getContext(), RewardsActivity.class);
+            //startActivityForResult(myIntent, 5);
+        } else if (id == R.id.nav_slideshow) {
+            //Intent myIntent = new Intent(navigationView.getContext(), .class);
+            //startActivityForResult(myIntent, 6);
+        } else if (id == R.id.nav_manage) {
+            //Intent myIntent = new Intent(navigationView.getContext(), M.class);
+            //startActivityForResult(myIntent, 7);
+        }
+        // set item as selected to persist highlight
+        menuItem.setChecked(true);
+        // close drawer when item is tapped
+        mDrawerLayout.closeDrawers();
+
+        // Add code here to update the UI based on the item selected
+        // For example, swap UI fragments here
+
+        return true;
+    }
 
 
 }
