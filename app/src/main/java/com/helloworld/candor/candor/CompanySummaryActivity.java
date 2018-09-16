@@ -163,11 +163,12 @@ class CustomAdapter extends ArrayAdapter<String> implements View.OnClickListener
 //        result.startAnimation(animation);
         lastPosition = position;
 
+        viewHolder.gradeLayout.setBackgroundColor(companyActivity.getColorByName(compName.toLowerCase()));
         if(compName.length() > 15) {
             compName = compName.substring(0, 13) + "...";
         }
+        compName = companyActivity.makeUpper(compName);
         viewHolder.compName.setText(compName);
-        viewHolder.gradeLayout.setBackgroundColor(companyActivity.getColorByName(compName));
         // Return the completed view to render on screen
         return convertView;
     }
