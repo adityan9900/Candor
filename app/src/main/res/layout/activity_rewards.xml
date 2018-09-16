@@ -62,6 +62,18 @@
                  android:scaleType="fitCenter"
                  app:srcCompat="@drawable/coupon" />
 
+             <ImageButton
+                 android:id="@+id/promoCodeTwo"
+                 android:layout_width="wrap_content"
+                 android:layout_height="135dp"
+                 android:layout_below="@+id/buttonOne"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/promocodeb"
+
+                 />
+
 
              <ImageButton
                  android:id="@+id/buttonTwo"
@@ -73,6 +85,18 @@
                  android:paddingBottom="0dp"
                  android:scaleType="fitCenter"
                  app:srcCompat="@drawable/second" />
+
+             <ImageButton
+                 android:id="@+id/promoCodeThree"
+                 android:layout_width="wrap_content"
+                 android:layout_below="@+id/buttonTwo"
+                 android:layout_height="135dp"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/promocodec"
+
+                 />
 
 
              <ImageButton
@@ -87,6 +111,18 @@
                  app:srcCompat="@drawable/third" />
 
              <ImageButton
+                 android:id="@+id/promoCodeFour"
+                 android:layout_width="wrap_content"
+                 android:layout_below="@+id/buttonThree"
+                 android:layout_height="135dp"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/promocode"
+
+                 />
+
+             <ImageButton
                  android:id="@+id/buttonFour"
                  android:layout_width="wrap_content"
 
@@ -96,6 +132,18 @@
                  android:paddingBottom="0dp"
                  android:scaleType="fitCenter"
                  app:srcCompat="@drawable/coupon" />
+
+             <ImageButton
+                 android:id="@+id/promoCodeFive"
+                 android:layout_width="wrap_content"
+                 android:layout_height="135dp"
+                 android:layout_below="@+id/buttonFour"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/promocodeb"
+
+                 />
 
              <ImageButton
                  android:id="@+id/buttonFive"
@@ -109,6 +157,19 @@
                  app:srcCompat="@drawable/second" />
 
              <ImageButton
+                 android:id="@+id/promoCodeSix"
+                 android:layout_width="wrap_content"
+                 android:layout_height="135dp"
+                 android:layout_below="@+id/buttonFive"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/promocodec"
+
+                 />
+
+
+             <ImageButton
                  android:id="@+id/buttonSix"
                  android:layout_width="wrap_content"
 
@@ -118,6 +179,18 @@
                  android:paddingBottom="0dp"
                  android:scaleType="fitCenter"
                  app:srcCompat="@drawable/third" />
+
+             <ImageButton
+                 android:id="@+id/promoCodeSeven"
+                 android:layout_width="wrap_content"
+                 android:layout_height="135dp"
+                 android:layout_below="@+id/buttonSix"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/promocode"
+
+                 />
 
              <ImageButton
                  android:id="@+id/buttonSeven"
