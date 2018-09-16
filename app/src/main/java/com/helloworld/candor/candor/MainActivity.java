@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.beardedhen.androidbootstrap.TypefaceProvider;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     final int COMPANY_SUMMARY_REQUEST_CODE = 1;
     final int REWARDS_REQUEST_CODE = 2;
+   // final int PROMO_REQUEST_CODE = 3;
 
 
 
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
     Button submitCompanyButton;
     Button rewardsButton;
+    //ImageButton promoOne;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,7 +44,11 @@ public class MainActivity extends AppCompatActivity {
         submitCompanyButton = findViewById(R.id.submitCompanyButton);
         rewardsButton = findViewById(R.id.rewardsButton);
 
+
         TypefaceProvider.registerDefaultIconSets();
+
+
+
 
         submitCompanyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(myIntent, REWARDS_REQUEST_CODE);
             }
         });
+
+
 
 
 

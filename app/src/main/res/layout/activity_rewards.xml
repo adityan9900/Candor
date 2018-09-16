@@ -33,6 +33,25 @@
              android:isScrollContainer="true"
              android:padding="8dp">
 
+
+
+
+
+
+
+
+             <ImageButton
+                 android:id="@+id/promoCode"
+                 android:layout_width="wrap_content"
+                 android:layout_height="135dp"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/promocode"
+
+                 />
+
+
              <ImageButton
                  android:id="@+id/buttonOne"
                  android:layout_width="wrap_content"
