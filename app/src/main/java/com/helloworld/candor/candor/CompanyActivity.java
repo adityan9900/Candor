@@ -1075,15 +1075,15 @@ public class CompanyActivity {
         secondMap.put("xpo logistics", "industrials");
 
 
-        dmap.put("HP", "HP Inc. is an American technology company which develops personal computers, printers and related supplies, as well as 3D Printing solutions.");
-        dmap.put("Microsoft", "Microsoft Corporation is an American multinational technology company with headquarters in Redmond, Washington. It develops, manufactures, licenses, supports and sells computer software, consumer electronics, personal computers, and related services.");
-        dmap.put("Nike", "Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services.");
-        dmap.put("Apple", "Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services.");
-        dmap.put("Starbucks", "Starbucks Corporation is an American coffee company and coffeehouse chain. Starbucks was founded in Seattle, Washington in 1971. As of 2018, the company operates 28,218 locations worldwide.");
-        dmap.put("Visa", "Visa Inc. is an American multinational financial services corporation headquartered in Foster City, California, United States. It facilitates electronic funds transfers throughout the world, most commonly through Visa-branded credit cards, gift cards, and debit cards.");
-        dmap.put("Eli Lilly and Co", "Eli Lilly and Company is a global pharmaceutical company headquartered in Indianapolis, Indiana, with offices in 18 countries. Its products are sold in approximately 125 countries.");
-        dmap.put("FedEx", "FedEx Corporation is an American multinational courier delivery services company headquartered in Memphis, Tennessee. The company is known for its overnight shipping service and pioneering a system that could track packages and provide real-time updates on package location, a feature that has now been implemented by most other carrier services.");
-        dmap.put("Amazon", "Amazon.com, Inc., doing business as Amazon, is an American electronic commerce and cloud computing company based in Seattle, Washington, that was founded by Jeff Bezos on July 5, 1994. The tech giant is the largest Internet retailer in the world as measured by revenue and market capitalization, and second largest after Alibaba Group in terms of total sales.");
+        dmap.put("hp", "HP Inc. is an American technology company which develops personal computers, printers and related supplies, as well as 3D Printing solutions.");
+        dmap.put("microsoft", "Microsoft Corporation is an American multinational technology company with headquarters in Redmond, Washington. It develops, manufactures, licenses, supports and sells computer software, consumer electronics, personal computers, and related services.");
+        dmap.put("nike", "Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services.");
+        dmap.put("apple", "Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services.");
+        dmap.put("starbucks", "Starbucks Corporation is an American coffee company and coffeehouse chain. Starbucks was founded in Seattle, Washington in 1971. As of 2018, the company operates 28,218 locations worldwide.");
+        dmap.put("visa", "Visa Inc. is an American multinational financial services corporation headquartered in Foster City, California, United States. It facilitates electronic funds transfers throughout the world, most commonly through Visa-branded credit cards, gift cards, and debit cards.");
+        dmap.put("eli lilly and co", "Eli Lilly and Company is a global pharmaceutical company headquartered in Indianapolis, Indiana, with offices in 18 countries. Its products are sold in approximately 125 countries.");
+        dmap.put("fedex", "FedEx Corporation is an American multinational courier delivery services company headquartered in Memphis, Tennessee. The company is known for its overnight shipping service and pioneering a system that could track packages and provide real-time updates on package location, a feature that has now been implemented by most other carrier services.");
+        dmap.put("amazon", "Amazon.com, Inc., doing business as Amazon, is an American electronic commerce and cloud computing company based in Seattle, Washington, that was founded by Jeff Bezos on July 5, 1994. The tech giant is the largest Internet retailer in the world as measured by revenue and market capitalization, and second largest after Alibaba Group in terms of total sales.");
         
 
 
@@ -1269,6 +1269,10 @@ public class CompanyActivity {
             }
         }
         return result;
+    }
+
+    public String getDescriptor(String x) {
+        return dmap.get(x);
     }
 
 }
