@@ -1,9 +1,7 @@
 package com.helloworld.candor.candor;
 
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.ArrayList;
 
 public class CompanyActivity {
     public static final double APLUS = 83.70;
@@ -1051,7 +1049,7 @@ public class CompanyActivity {
             return "A";
         }
         else if (getScoreNum(x)>43.20) {
-            return "A";
+            return "A-";
         }
         else if (getScoreNum(x)>38.10) {
             return "B+";
@@ -1195,5 +1193,9 @@ public class CompanyActivity {
         return (count - getRanking(x)) / count;
     }
 
+    /*public ArrayList<String> getPotentialAlt(String x) {
+        ArrayList<String> result = new ArrayList<String>();
 
+    }
+    */
 }
