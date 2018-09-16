@@ -25,7 +25,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.helloworld.candor.candor.MainActivity" />
         </activity>
-        <activity android:name=".NavigationDrawer"></activity>
     </application>
 
 </manifest>

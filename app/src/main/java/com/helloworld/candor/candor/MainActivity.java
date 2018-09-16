@@ -25,8 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.beardedhen.androidbootstrap.TypefaceProvider;
-import com.helloworld.candor.candor.Adapters.CustomExpandableListAdapter;
-import com.helloworld.candor.candor.Helper.FragmentNavigationManager;
+
 import com.helloworld.candor.candor.Interface.NavigationManager;
 
 import org.w3c.dom.Text;
@@ -45,16 +44,7 @@ public class MainActivity extends AppCompatActivity {
     final int COMPANY_SUMMARY_REQUEST_CODE = 1;
     final int REWARDS_REQUEST_CODE = 2;
     // final int PROMO_REQUEST_CODE = 3;
-    private DrawerLayout mDrawerLayout;
-    private ActionBarDrawerToggle mDrawerToggle;
-    private String mActivityTitle;
-    private String[] items;
 
-    private ExpandableListView expandableListView;
-    private ExpandableListAdapter adapter;
-    private List<String> lstTitle;
-    private Map<String,List<String>> lstChild;
-    private NavigationManager navigationManager;
 
 
 
@@ -66,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     TextView companyInputTextView;
     TextView blackListOne, blackListTwo, blackListThree;
     CompanyActivity companyActivity;
-    //ImageButton promoOne;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,23 +64,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mDrawerLayout= (DrawerLayout)findViewById(R.id.drawer_layout);
-        mActivityTitle = getTitle().toString();
-        expandableListView = (ExpandableListView)findViewById(R.id.navList);
-        navigationManager = FragmentNavigationManager.getmInstance(this);
 
-        initItems();
 
-        View listHeaderView = getLayoutInflater().inflate(R.layout.nav_header, null, false);
-        expandableListView.addHeaderView(listHeaderView);
 
-        genData();
-
-        addDrawersItem();
-        setupDrawer();
-
-        if(savedInstanceState==null)
-            selectFirstItemAsDefault();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -167,123 +143,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-
-        if(mDrawerToggle.onOptionsItemSelected(item))
-            return true;
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void genData(){
-
-        List<String> title = Arrays.asList("Activites");
-        List<String> childitem = Arrays.asList("Home","Rewards","Friends", "Community");
-
-        lstChild = new TreeMap<>();
-        lstChild.put(title.get(0),childitem);
-
-        lstTitle = new ArrayList<>(lstChild.keySet());
-
-    }
-
-    private void initItems(){
-
-         items = new String[1];
-
-    }
-
-    private void addDrawersItem(){
-
-        adapter = new CustomExpandableListAdapter(this, lstTitle, lstChild);
-        expandableListView.setAdapter(adapter);
-        expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-            @Override
-            public void onGroupExpand(int groupPosition) {
-                getSupportActionBar().setTitle(lstTitle.get(groupPosition).toString());
-
-            }
-        });
-            expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-                @Override
-                public void onGroupCollapse(int groupPosition) {
-                    getSupportActionBar().setTitle("Menu");
-                }
-            });
-            expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-                @Override
-                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-
-                    String selectedItem= ((List)(lstChild.get(lstTitle.get(groupPosition))))
-                    .get(childPosition).toString();
-
-                    getSupportActionBar().setTitle(selectedItem);
-
-                    if(items[0].equals(lstTitle.get(groupPosition)))
-                        navigationManager.showFragment(selectedItem);
-                    else
-                        throw new IllegalArgumentException("Not Supported Fragment");
-
-                    mDrawerLayout.closeDrawer(GravityCompat.START);
-
-
-
-
-                    return false;
-                }
-            });
-    }
-
-    private void setupDrawer(){
-
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close)
-        {
-            @Override
-            public void onDrawerOpened(View drawerView){
-                super.onDrawerOpened(drawerView);
-                //getSupportActionBar().setTitle("Menu");
-                invalidateOptionsMenu();
-            }
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                super.onDrawerClosed(drawerView);
-                //getSupportActionBar().setTitle(mActivityTitle);
-                invalidateOptionsMenu();
-
-            }
-        };
-
-        mDrawerToggle.setDrawerIndicatorEnabled(true);
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-
-    }
-
-    private void selectFirstItemAsDefault(){
-        if(navigationManager != null)
-        {
-            String firstItem = lstTitle.get(0);
-            navigationManager.showFragment(firstItem);
-            getSupportActionBar().setTitle(firstItem);
-        }
-    }
-    @Override
-    protected void onPostCreate(@Nullable Bundle savedInstanceState){
-        super.onPostCreate(savedInstanceState);
-        mDrawerToggle.syncState();
-    }
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        mDrawerToggle.onConfigurationChanged(newConfig);
-
-    }
 
 }
