@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.beardedhen.androidbootstrap.TypefaceProvider;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     Button submitCompanyButton;
     Button rewardsButton;
     TextView companyInputTextView;
+    TextView blackListOne, blackListTwo, blackListThree;
     CompanyActivity companyActivity;
     //ImageButton promoOne;
 
@@ -41,8 +44,15 @@ public class MainActivity extends AppCompatActivity {
         submitCompanyButton = findViewById(R.id.submitCompanyButton);
         rewardsButton = findViewById(R.id.rewardsButton);
         companyInputTextView = findViewById(R.id.companyInputTextView);
+        blackListOne = findViewById(R.id.blackListOne);
+        blackListTwo = findViewById(R.id.blackListTwo);
+        blackListThree = findViewById(R.id.blackListThree);
 
         TypefaceProvider.registerDefaultIconSets();
+
+        blackListOne.setText(companyActivity.getLowest().get(0));
+        blackListTwo.setText(companyActivity.getLowest().get(1));
+        blackListThree.setText(companyActivity.getLowest().get(2));
 
         submitCompanyButton.setOnClickListener(new View.OnClickListener() {
             @Override

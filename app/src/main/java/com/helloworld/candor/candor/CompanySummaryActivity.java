@@ -20,6 +20,7 @@ public class CompanySummaryActivity extends AppCompatActivity {
     TextView companyNameView, letterGradeView;
     ListView alternativesList;
     int color;
+    CompanyActivity companyActivity;
 
     ArrayAdapter<String> adapter;
     ArrayList<String> test;
@@ -32,20 +33,7 @@ public class CompanySummaryActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
-        test = new ArrayList<>();
-        test.add("Test1");
-        test.add("Test2");
-        test.add("Test1");
-        test.add("Test2");
-        test.add("Test1");
-        test.add("Test2");test.add("Test1");
-        test.add("Test2");
-        test.add("Test1");
-        test.add("Test2");
-        test.add("Test1");
-        test.add("Test2");
+        companyActivity = new CompanyActivity();
 
         gradeLayout = findViewById(R.id.gradeLayout);
         companyNameView = findViewById(R.id.companyNameView);
@@ -55,6 +43,7 @@ public class CompanySummaryActivity extends AppCompatActivity {
         companyName = getIntent().getExtras().get("companyName").toString();
         letterGrade = getIntent().getExtras().get("letterGrade").toString();
         color = (Integer)(getIntent().getExtras().get("color"));
+        test = companyActivity.getPotentialAlt(companyName);
 
         companyName = companyName.toUpperCase();
 
