@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,49 +8,118 @@
     android:background="@color/bootstrap_gray_dark"
     tools:context=".RewardsActivity">
 
+
     <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="344dp"
-        android:layout_height="551dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/couponOne"
-        android:layout_width="331dp"
-        android:layout_height="146dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:backgroundTint="@color/bootstrap_brand_success"
-        android:contentDescription="@string/couponone"
-        android:scaleType="fitCenter"
-        android:src="@drawable/coupon"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
-        app:layout_constraintEnd_toEndOf="@+id/scrollView3"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/scrollView3" />
 
-    <ImageButton
-        android:id="@+id/couponTwo"
-        android:layout_width="331dp"
-        android:layout_height="146dp"
-        android:layout_marginBottom="180dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:backgroundTint="@color/bootstrap_brand_success"
-        android:contentDescription="@string/coupontwo"
-        android:scaleType="fitCenter"
-        android:src="@drawable/second"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
-        app:layout_constraintEnd_toEndOf="@+id/scrollView3"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/scrollView3" />
 
-</android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:isScrollContainer="true"
+         >
+
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:isScrollContainer="true"
+             android:padding="8dp">
+
+             <ImageButton
+                 android:id="@+id/buttonOne"
+                 android:layout_width="wrap_content"
+
+                 android:layout_height="135dp"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/coupon" />
+
+
+             <ImageButton
+                 android:id="@+id/buttonTwo"
+                 android:layout_width="wrap_content"
+
+                 android:layout_height="135dp"
+                 android:layout_below="@+id/buttonOne"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/second" />
+
+
+             <ImageButton
+                 android:id="@+id/buttonThree"
+                 android:layout_width="wrap_content"
+
+                 android:layout_height="135dp"
+                 android:layout_below="@+id/buttonTwo"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/third" />
+
+             <ImageButton
+                 android:id="@+id/buttonFour"
+                 android:layout_width="wrap_content"
+
+                 android:layout_height="135dp"
+                 android:layout_below="@+id/buttonThree"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/coupon" />
+
+             <ImageButton
+                 android:id="@+id/buttonFive"
+                 android:layout_width="wrap_content"
+
+                 android:layout_height="135dp"
+                 android:layout_below="@+id/buttonFour"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/second" />
+
+             <ImageButton
+                 android:id="@+id/buttonSix"
+                 android:layout_width="wrap_content"
+
+                 android:layout_height="135dp"
+                 android:layout_below="@+id/buttonFive"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/third" />
+
+             <ImageButton
+                 android:id="@+id/buttonSeven"
+                 android:layout_width="wrap_content"
+
+                 android:layout_height="135dp"
+                 android:layout_below="@+id/buttonSix"
+                 android:backgroundTint="@android:color/transparent"
+                 android:paddingBottom="0dp"
+                 android:scaleType="fitCenter"
+                 app:srcCompat="@drawable/coupon" />
+
+
+         </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+    </ScrollView>>
+
+
+
+
+ </android.support.constraint.ConstraintLayout>
