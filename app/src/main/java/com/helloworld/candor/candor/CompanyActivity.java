@@ -1272,7 +1272,7 @@ public class CompanyActivity {
     }
 
     public String getDescriptor(String x) {
-        return dmap.get(x);
+        return dmap.get(x.toLowerCase());
     }
 
 }
