@@ -42,8 +42,6 @@ public class CompanySummaryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_summary);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         companyActivity = new CompanyActivity();
 
         gradeLayout = findViewById(R.id.gradeLayout);
@@ -76,13 +74,15 @@ public class CompanySummaryActivity extends AppCompatActivity {
 
         alternativesList.setAdapter(new CustomAdapter(test, getApplicationContext()));
 
-        getSupportActionBar().setTitle("Company Summary");
+        //getSupportActionBar().setTitle("Company Summary");
 
         moreInformationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(v.getContext(), MoreInformationActivity.class);
                 myIntent.putExtra("companyName", companyName);
+                myIntent.putExtra("color", color);
+                myIntent.putExtra("letterGrade", letterGrade);
                 startActivityForResult(myIntent, MORE_INFO_REQUEST_CODE);
             }
         });
