@@ -1041,6 +1041,9 @@ public class CompanyActivity {
     }
 
     public String getScoreGrade(String x) {
+        if (!hmap.containsKey(x)) {
+            return "ERROR";
+        }
         if (getScoreNum(x)>60.00) {
             return "A+";
         }
